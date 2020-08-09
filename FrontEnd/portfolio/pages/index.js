@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { siteTitle } from '../components/generic'
+import Layout, { pageTitle } from '../components/home.layout.js'
 import utilStyles from '../styles/utils.module.css'
 
 // export async function getStaticProps() {
@@ -9,13 +9,13 @@ import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{pageTitle}</title>
       </Head>
       <section>
         <h1>Hello</h1>
       </section>
-    </>
+    </Layout>
   )
 }
