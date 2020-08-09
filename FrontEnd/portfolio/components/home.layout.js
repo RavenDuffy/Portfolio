@@ -19,7 +19,7 @@ export default function Layout({children}) {
       </Head>
       <header className={styles.header}>
         <>
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <h1 className={`${styles.largeCenterHeader} ${utilStyles.noSelect}`}>{name}</h1>
           <img
             src="images/down.svg"
             className={`${styles.downArrow}`}

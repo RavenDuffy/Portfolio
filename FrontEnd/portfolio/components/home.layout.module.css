@@ -4,6 +4,15 @@
   margin: 3rem auto 6rem;
 }
 
+.largeCenterHeader {
+  font-size: 8rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  pointer-events: none;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -25,8 +34,8 @@
 }
 
 .downArrow {
-  width: 2rem;
-  height: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .downArrow:hover {
