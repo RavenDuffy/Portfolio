@@ -25,10 +25,10 @@ export default function Layout({children}) {
         </header>
         <div className={`${styles.rowContainer} ${utilStyles.noSelect}`}>
           <Link href="#about"><h1>About</h1></Link>
-          <Link href="#"><h1>Showcase</h1></Link>
-          <Link href="#"><h1>Contact</h1></Link>
+          <Link href="#showcase"><h1>Showcase</h1></Link>
+          <Link href="#contact"><h1>Contact</h1></Link>
         </div>
-        <div className={`${styles.flexContainer}`}>
+        <div className={styles.flexContainer}>
           <Link href="#about">
             <img
               src="images/down.svg"
