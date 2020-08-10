@@ -13,9 +13,6 @@ export default function Home() {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <section>
-        <h1>Hello</h1>
-      </section>
     </Layout>
   )
 }

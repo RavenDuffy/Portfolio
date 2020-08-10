@@ -10,7 +10,7 @@ export default function Layout({children}) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="images/RavenWhiteBack.png" />
         <meta
           name="Raven Duffy"
           content="Raven Duffy's portfolio"
@@ -27,6 +27,7 @@ export default function Layout({children}) {
           />
         </>
       </header>
+      <main>{children}</main>
     </div>
   )
 }

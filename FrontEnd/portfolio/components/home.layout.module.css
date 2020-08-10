@@ -5,7 +5,7 @@
 }
 
 .largeCenterHeader {
-  font-size: 8rem;
+  font-size: 7rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -34,8 +34,8 @@
 }
 
 .downArrow {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .downArrow:hover {
