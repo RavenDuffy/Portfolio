@@ -52,6 +52,10 @@
   color: #999;
 }
 
+.extraLeftMargin {
+  margin-left: 1.5rem;
+}
+
 .noSelect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

@@ -1,7 +1,31 @@
 .container {
-  max-width: 36rem;
+  max-width: 44rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rowContainer {
+  padding: 0 1rem;
+  margin: 0 auto 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rowContainer h1 {
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+
+.rowContainer h1:hover {
+  transition: 0.2s;
+  background-color: #ff9400;
 }
 
 .largeCenterHeader {
@@ -34,11 +58,12 @@
 }
 
 .downArrow {
-  width: 4rem;
-  height: 4rem;
-}
+  height: 3.5rem;
+  animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+} @keyframes blink { to { filter: invert(12%); } }
 
 .downArrow:hover {
   transition: 0.2s;
+  animation: non;
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(10deg) brightness(118%) contrast(119%);
 }
