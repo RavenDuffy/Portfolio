@@ -34,7 +34,15 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
-  pointer-events: none;
+}
+
+.largeCenterHeader:hover {
+  /* transition: .5s;
+  background-image: url("../public/images/TitleBacker.gif");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
 }
 
 .header {
