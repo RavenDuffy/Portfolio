@@ -8,7 +8,7 @@ export const pageTitle = 'Raven Duffy'
 
 export default function Layout({children}) {
   return (
-    <div className={styles.container}>
+    <div className={styles.mainContainer}>
       <Head>
         <link rel="icon" href="favicon.ico" />
         <meta
@@ -17,11 +17,27 @@ export default function Layout({children}) {
         />
         <meta name="title" content={pageTitle} />
       </Head>
-      <header className={styles.header}>
-        <>
-          <h1 className={`${styles.largeCenterHeader} ${utilStyles.noSelect}`}>{name}</h1>
-        </>
-      </header>
+      <div className={styles.hero}>
+        <header className={styles.header}>
+          <Link href="/">
+            <h1 className={`${styles.largeCenterHeader} ${utilStyles.noSelect}`}>{name}</h1>
+          </Link>
+        </header>
+        <div className={`${styles.rowContainer} ${utilStyles.noSelect}`}>
+          <Link href="#about"><h1>About</h1></Link>
+          <Link href="#"><h1>Showcase</h1></Link>
+          <Link href="#"><h1>Contact</h1></Link>
+        </div>
+        <div className={styles.flexContainer}>
+          <Link href="#about">
+            <img
+              src="images/down.svg"
+              className={`${styles.downArrow} ${utilStyles.noSelect}`}
+              alt={"down-arrow"}
+            />
+          </Link>
+        </div>
+      </div>
       <main>{children}</main>
     </div>
   )

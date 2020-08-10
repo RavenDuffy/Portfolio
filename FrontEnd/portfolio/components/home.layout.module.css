@@ -4,15 +4,21 @@
   margin: 3rem auto 6rem;
 }
 
+.mainContainer {
+  max-width: 44rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
 .flexContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .rowContainer {
+  width: 100%;
   padding: 0 1rem;
-  margin: 0 auto 6rem;
+  margin: 0 auto 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -51,22 +57,18 @@
   align-items: center;
 }
 
-.headerImage {
-  width: 6rem;
-  height: 6rem;
-}
-
-.headerHomeImage {
-  width: 8rem;
-  height: 8rem;
-}
-
-.backToHome {
-  margin: 3rem 0 0;
+.hero {
+  width: 100%;
+  padding-top: 25vh;
+  height: 75vh;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .downArrow {
-  height: 3.5rem;
+  height: 3rem;
   animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 } @keyframes blink { to { filter: invert(12%); } }
 
@@ -74,4 +76,64 @@
   transition: 0.2s;
   animation: non;
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(10deg) brightness(118%) contrast(119%);
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introText {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 6rem;
+}
+
+.infoContainer div {
+  width: 100%;
+}
+
+.infoContainer div:first-child {
+  margin-right: 5%;
+}
+
+.infoContainer h3 {
+  text-transform: uppercase;
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 0;
+}
+
+.outlineContainer {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.outlineContainer p {
+  margin: 0 0 0.5rem;
+}
+
+.outlineContainer p:last-child {
+  margin: 0 0 -.6rem;
+}
+
+.psychbacker {
+  transition: .5s;
+  background-image: url("../public/images/TitleBacker.gif");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.7rem;
 }
