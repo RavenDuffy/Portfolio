@@ -28,7 +28,7 @@ export default function Layout({children}) {
           <Link href="#"><h1>Showcase</h1></Link>
           <Link href="#"><h1>Contact</h1></Link>
         </div>
-        <div className={styles.flexContainer}>
+        <div className={`${styles.flexContainer}`}>
           <Link href="#about">
             <img
               src="images/down.svg"
