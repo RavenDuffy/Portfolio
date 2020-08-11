@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.rowContainer {
+.navContainer {
   width: 100%;
   padding: 0 1rem;
   margin: 0 0 3rem;
@@ -28,14 +28,29 @@
   justify-content: space-around;
 }
 
-.rowContainer h1 {
+.navContainer h1 {
   padding: 0 0.5rem;
   font-size: 2rem;
 }
 
-.rowContainer h1:hover {
+.navContainer h1:hover {
   transition: 0.2s;
   background-color: #ff9400;
+}
+
+.sticky {
+  border-bottom: 3px solid #fff;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: .3s;
+  width: 44rem;
+}
+
+.sticky h1 {
+  padding: 0 0.5rem;
+  margin: 0;
 }
 
 .largeCenterHeader {

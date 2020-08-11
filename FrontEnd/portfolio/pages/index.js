@@ -49,7 +49,15 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.section} id="showcase">
-
+        <div className={styles.flexCenterContainer}>
+          <Link href="#contact">
+            <img
+              src="images/down.svg"
+              className={`${styles.downArrow} ${utilStyles.noSelect}`}
+              alt={"down-arrow"}
+            />
+          </Link>
+        </div>
       </div>
       <div className={styles.section} id="contact">
         <form className={styles.inlineForm}>
@@ -59,11 +67,12 @@ export default function Home() {
           <label htmlFor="topic">I want to create a </label>
           <input type="text" name="topic" className={styles.topicInput} id="topic" placeholder="Website, App, etc..." required></input>
           <label htmlFor="completeDate"> and I'd like it finished by </label>
-          <input type="date" name="completeDate" className={styles.completeDateInput} id="completeDate" defaultValue="2020-07-24" required></input>
-          <label htmlFor="budget">. <br />I have a budget of $</label>
+          <input type="date" name="completeDate" className={styles.completeDateInput} id="completeDate" defaultValue="2020-07-24" required></input>.
+          <br />
+          <label htmlFor="budget">I have a budget of $</label>
           <input type="text" name="budget" className={styles.budgetInput} id="budget" placeholder="4000" required></input>
           <label htmlFor="email"> and I'd like to be contacted via </label>
-          <input type="email" name="email" className={styles.emailInput} id="email" placeholder="JohnDoe45@email.com" required></input>.
+          <input type="email" name="email" className={styles.emailInput} id="email" placeholder="John@Doe.com" required></input>.
         </form>
       </div>
     </Layout>
