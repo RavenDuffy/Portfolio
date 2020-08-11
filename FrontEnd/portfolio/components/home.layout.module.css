@@ -49,12 +49,14 @@
 }
 
 .largeCenterHeader:hover {
-  transition: .5s;
+  transition: 1s all .75s;
   background-image: url("../public/images/TitleBacker.gif");
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  filter: brightness(100%);
+  text-shadow: 10px 5px #ff9400;
 }
 
 .header {
