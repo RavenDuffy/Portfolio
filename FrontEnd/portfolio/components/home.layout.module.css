@@ -146,13 +146,13 @@
 
 
 .inlineForm {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 2;
   box-sizing: border-box;
 }
 
 .inlineForm input {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-family: 'OpenSans-SemiBold', sans-serif;
   color: #fff;
   background-color: transparent;
