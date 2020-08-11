@@ -20,12 +20,13 @@
 }
 
 .navContainer {
-  width: 100%;
+  width: 44rem;
   padding: 0 1rem;
   margin: 0 0 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: transparent;
 }
 
 .navContainer h1 {
@@ -39,13 +40,14 @@
 }
 
 .sticky {
-  border-bottom: 3px solid #fff;
-  background-color: #333;
+  background-color: #2f2f2f;
   position: fixed;
   top: 0;
   z-index: 10;
-  transition: .3s;
+  box-shadow: 0 3px #1113;
   width: 44rem;
+  padding: 0 50%;
+  transition: .3s;
 }
 
 .sticky h1 {
@@ -65,7 +67,7 @@
 
 .largeCenterHeader:hover {
   transition: 1s all .75s;
-  background-image: url("../public/images/TitleBacker.gif");
+  background-image: url("../../public/images/TitleBacker.gif");
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;

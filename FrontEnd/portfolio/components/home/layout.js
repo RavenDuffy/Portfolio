@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from './home.layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from './layout.module.css'
+import utilStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
@@ -10,7 +10,7 @@ export const pageTitle = 'Raven Duffy'
 
 const Scroll = dynamic(
   () => {
-    return import("./scroll.js");
+    return import("../scripts/scroll.js");
   },
   { ssr: false }
 )

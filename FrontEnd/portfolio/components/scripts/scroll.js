@@ -1,5 +1,5 @@
-import styles from './home.layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from '../home/layout.module.css'
+import utilStyles from '../../styles/utils.module.css'
 
 function onScroll() {
   const header = document.querySelector("header")
