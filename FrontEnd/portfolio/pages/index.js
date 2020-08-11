@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <div className={styles.section} id="about">
         <p className={styles.introText}>Hi, I'm <span className={styles.importantText}>Raven</span>, a final year computer science student studying at
-          Newcastle University. Currently <a href="mailto:ravend2013@gmail.com?subject=Hi%20Raven!">available</a> for
+          Newcastle University. Currently <a href="mailto:ravenduffy@pm.me?subject=Hi%20Raven!">available</a> for
           any small project work.
         </p>
         <div className={styles.infoContainer}>
@@ -32,6 +32,7 @@ export default function Home() {
           <div className={styles.flexContainer}>
             <h3 className={utilStyles.noSelect}>Socials</h3>
             <div className={styles.outlineContainer}>
+              <p><a target="_blank" href="mailto:ravenduffy@pm.me?subject=Hi%20Raven!">ProtonMail</a></p>
               <p><a target="_blank" href="https://www.linkedin.com/in/ravenduffy/">LinkedIn</a></p>
               <p><a target="_blank" href="https://github.com/ravenduffy/">GitHub</a></p>
             </div>
