@@ -15,7 +15,7 @@ export default function Home() {
         <title>{pageTitle}</title>
       </Head>
       <div className={styles.section} id="about">
-        <p className={styles.introText}>Hi, I'm <span className={styles.importantText}>Raven</span>, a final year computer science student studing at
+        <p className={styles.introText}>Hi, I'm <span className={styles.importantText}>Raven</span>, a final year computer science student studying at
           Newcastle University. Currently <a href="mailto:ravend2013@gmail.com?subject=Hi%20Raven!">available</a> for
           any small project work.
         </p>

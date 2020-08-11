@@ -49,12 +49,12 @@
 }
 
 .largeCenterHeader:hover {
-  /* transition: .5s;
+  transition: .5s;
   background-image: url("../public/images/TitleBacker.gif");
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent; */
+  color: transparent;
 }
 
 .header {
@@ -113,7 +113,7 @@
 }
 
 .infoContainer div:first-child {
-  margin-right: 5%;
+  margin-right: 7%;
 }
 
 .infoContainer h3 {
@@ -124,8 +124,7 @@
 }
 
 .outlineContainer {
-  border-right: 0.1rem solid #fff;
-  border-top: 0.1rem solid #fff;
+  border-top: 2px solid #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
