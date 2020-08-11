@@ -143,3 +143,37 @@
 .importantText {
   color: #ff9400;
 }
+
+
+.inlineForm {
+  font-size: 1.8rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+
+.inlineForm input {
+  font-size: 1.8rem;
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  padding-bottom: 0;
+  border-bottom: 3px solid white;
+  width: 20rem;
+}
+
+.inlineForm input:focus {
+  outline: none;
+}
+
+.inlineForm input.topicInput {
+  width: 17rem;
+}
+
+.inlineForm input.completeDateInput {
+  width: 16rem;
+}
+
+.inlineForm input.budgetInput {
+  width: 4.2rem;
+}
