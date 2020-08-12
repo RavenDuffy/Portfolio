@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from './layout.module.css'
-import utilStyles from '../../styles/utils.module.css'
 import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
+import styles from './layout.module.css'
+import utilStyles from '../../styles/utils.module.css'
+import NavArrow from './navarrow.js'
 
 const name = 'Raven Duffy'
 export const pageTitle = 'Raven Duffy'
@@ -37,15 +38,7 @@ export default function Layout({children}) {
             <Link href="#contact"><h1>Contact</h1></Link>
           </div>
         </header>
-        <div className={styles.flexContainer}>
-          <Link href="#about">
-            <img
-              src="images/down.svg"
-              className={`${styles.downArrow} ${utilStyles.noSelect}`}
-              alt={"down-arrow"}
-            />
-          </Link>
-        </div>
+        <NavArrow target="about"/>
       </div>
       <main>{children}</main>
       <Scroll />
