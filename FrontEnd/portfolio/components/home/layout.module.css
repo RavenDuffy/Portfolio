@@ -10,15 +10,6 @@
   margin: 0 auto;
 }
 
-.flexContainer, .flexCenterContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.flexCenterContainer {
-  align-items: center;
-}
-
 .navContainer {
   width: 44rem;
   padding: 0 1rem;
@@ -91,21 +82,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.downArrow {
-  margin: 5vh 0 0;
-  position: sticky;
-  top: 2vh;
-  float: right;
-  height: 3rem;
-  animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
-} @keyframes blink { to { filter: invert(12%); } }
-
-.downArrow:hover {
-  transition: 0.2s;
-  animation: non;
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(10deg) brightness(118%) contrast(119%);
 }
 
 .section {
