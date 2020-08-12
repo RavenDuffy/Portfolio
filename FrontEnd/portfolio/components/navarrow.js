@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import utilStyles from '../../styles/utils.module.css'
-import styles from './layout.module.css'
+import utilStyles from '../styles/utils.module.css'
+import styles from './home/layout.module.css'
 
 export default function NavArrow({target}) {
   return (

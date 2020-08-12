@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import styles from './layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
-import NavArrow from './navarrow.js'
+import NavArrow from '../navarrow.js'
 
 const name = 'Raven Duffy'
 export const pageTitle = 'Raven Duffy'

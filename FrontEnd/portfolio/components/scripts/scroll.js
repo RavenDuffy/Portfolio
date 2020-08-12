@@ -6,7 +6,7 @@ function onScroll() {
   const navContainer = header.children[1];
   const originalState = `${styles.navContainer} ${utilStyles.noSelect}`
 
-  navContainer.className = (window.scrollY >= 430)
+  navContainer.className = (window.scrollY >= 450)
     ? `${originalState} ${styles.sticky}`
     : `${originalState}`
 }
