@@ -17,7 +17,7 @@ export default function ContactLayout() {
         <label htmlFor="budget">I have a budget of $</label>
         <input type="text" name="budget" className={styles.budgetInput} id="budget" placeholder="4000" required></input>
         <label htmlFor="email"> and I'd like to be contacted via </label>
-        <input type="email" name="email" className={styles.emailInput} id="email" placeholder="John@Doe.com" required></input>.
+        <input type="email" name="email" className={styles.emailInput} id="email" placeholder="JohnDoe@email.com" required></input>.
       </form>
     </div>
   )
