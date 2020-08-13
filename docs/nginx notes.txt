@@ -4,3 +4,8 @@ sudo systemctl start ngins (start instance)
 sudo systemctl restart ngins (restart instance)
 sudo systemctl reload ngins (reloads instance without dropping connections)
 
+nginx file structure:
+web content - /var/www/html
+server config - /etc/nginx
+config file - /etc/nginx/nginx.conf
+access/error logs - /var/log/nginx/[access/error].log
