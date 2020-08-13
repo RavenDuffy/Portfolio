@@ -9,3 +9,6 @@ web content - /var/www/html
 server config - /etc/nginx
 config file - /etc/nginx/nginx.conf
 access/error logs - /var/log/nginx/[access/error].log
+
+certbot
+renewal is automatic but check it will pass using - sudo certbot renew --dry-run
