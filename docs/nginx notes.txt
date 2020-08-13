@@ -1,0 +1,6 @@
+managing nginx:
+sudo systemctl stop nginx (stop instance)
+sudo systemctl start ngins (start instance)
+sudo systemctl restart ngins (restart instance)
+sudo systemctl reload ngins (reloads instance without dropping connections)
+
