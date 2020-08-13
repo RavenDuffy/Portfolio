@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout, { pageTitle } from '../components/home/layout.js'
+import Layout, { name } from '../components/home/layout.js'
 import AboutLayout from '../components/home/about.layout.js'
 import ShowcaseLayout from '../components/home/showcase.layout.js'
 import ContactLayout from '../components/home/contact.layout.js'
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>{pageTitle}</title>
+        <title>{name}</title>
       </Head>
       <AboutLayout />
       <ShowcaseLayout />

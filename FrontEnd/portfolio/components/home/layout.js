@@ -6,8 +6,11 @@ import styles from './layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
 import NavArrow from '../navarrow.js'
 
-const name = 'Raven Duffy'
-export const pageTitle = 'Raven Duffy'
+export const name = 'Raven Duffy'
+export const pageTitle = 'Raven Duffy | Anything you need to know about me'
+const description = `Hi I'm Raven Duffy, an up-and-coming developer with a \
+focus on web development. You can find links to any of my \
+socials and as well as previous projects here. `
 
 const Scroll = dynamic(
   () => {
@@ -20,12 +23,16 @@ export default function Layout({children}) {
   return (
     <div className={styles.mainContainer}>
       <Head>
+        <title>{pageTitle}</title>
         <link rel="icon" href="favicon.ico" />
-        <meta
-          name="Raven Duffy"
-          content="Raven Duffy's portfolio"
-        />
+        <meta name="Raven Duffy" content="Raven Duffy's portfolio" />
         <meta name="title" content={pageTitle} />
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+
+        <meta itemprop="name" content={pageTitle} />
+        <meta itemprop="description" content={description} />
+        <meta itemprop="image" content="images/NoBackRaven.png" />
       </Head>
       <div className={styles.hero}>
         <header className={styles.header}>

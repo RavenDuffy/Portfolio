@@ -12,3 +12,9 @@ access/error logs - /var/log/nginx/[access/error].log
 
 certbot
 renewal is automatic but check it will pass using - sudo certbot renew --dry-run
+
+pm2
+start with npm - pm2 start npm -- start
+
+google search console
+search.google.com - used to track usage stats
