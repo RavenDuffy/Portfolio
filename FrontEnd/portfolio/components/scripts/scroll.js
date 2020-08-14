@@ -3,9 +3,11 @@ import utilStyles from '../../styles/utils.module.css'
 
 function onScroll() {
   const nav = document.querySelector("[class*='navContainer']")
+  const head = document.querySelector("[class*='largeCenterHeader']")
+
   const originalState = `${styles.navContainer} ${utilStyles.noSelect}`
 
-  nav.className = (window.scrollY >= 450)
+  nav.className = (head.getBoundingClientRect().bottom <= 0)
     ? `${originalState} ${styles.sticky}`
     : `${originalState}`
 }
