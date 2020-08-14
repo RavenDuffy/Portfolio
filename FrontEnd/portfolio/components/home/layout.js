@@ -8,9 +8,9 @@ import NavArrow from '../navarrow.js'
 
 export const name = 'Raven Duffy'
 export const pageTitle = 'Raven Duffy | Anything you need to know about me'
-const description = `Hi I'm Raven Duffy, an up-and-coming developer with a \
-focus on web development. You can find links to any of my \
-socials and as well as previous projects here. `
+const description = `Hi I'm Raven Duffy, a full stack developer with a focus on \
+web development. You can find links to my socials as well as a showcase of my \
+previous projects here. `
 
 const Scroll = dynamic(
   () => {
