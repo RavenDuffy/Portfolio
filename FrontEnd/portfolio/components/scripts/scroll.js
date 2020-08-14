@@ -2,11 +2,10 @@ import styles from '../home/layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
 
 function onScroll() {
-  const header = document.querySelector("header")
-  const navContainer = header.children[1];
+  const nav = document.querySelector("[class*='navContainer']")
   const originalState = `${styles.navContainer} ${utilStyles.noSelect}`
 
-  navContainer.className = (window.scrollY >= 450)
+  nav.className = (window.scrollY >= 450)
     ? `${originalState} ${styles.sticky}`
     : `${originalState}`
 }

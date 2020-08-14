@@ -36,7 +36,6 @@
   top: 0;
   z-index: 10;
   box-shadow: 0 3px #1113;
-  width: 44rem;
   padding: 0 50%;
   transition: .3s;
 }

@@ -6,7 +6,6 @@ import NavArrow from '../navarrow.js'
 export default function ShowcaseLayout() {
   return (
     <div className={styles.section} id="showcase">
-      <NavArrow target="contact"/>
     </div>
   )
 }

@@ -29,7 +29,6 @@ export default function AboutLayout() {
           </div>
         </div>
       </div>
-      <NavArrow target="showcase"/>
     </div>
   )
 }
