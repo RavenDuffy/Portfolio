@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import utilStyles from '../../styles/utils.module.css'
 import styles from './layout.module.css'
-import NavArrow from '../navarrow.js'
 
 export default function AboutLayout() {
   return (
