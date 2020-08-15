@@ -17,7 +17,7 @@ previous projects here. `
 
 const Scroll = dynamic(
   () => {
-    return import("../scripts/scroll.js");
+    return import("../../lib/scroll.js");
   },
   { ssr: false }
 )

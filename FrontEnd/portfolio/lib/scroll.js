@@ -1,4 +1,4 @@
-import utilStyles from '../../styles/utils.module.css'
+import utilStyles from '../styles/utils.module.css'
 
 function onScroll() {
   const nav = document.querySelector("[class*='navContainer']")
