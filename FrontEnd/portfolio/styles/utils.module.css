@@ -100,8 +100,8 @@
   top: 0;
   z-index: 10;
   box-shadow: 0 3px #1113;
-  padding: 0 50%;
-  transition: .3s;
+  padding: 0 calc((100vw - 44.5rem) / 2);
+  transition: .3s all, width 1ms none;
 }
 
 .sticky h1 {
@@ -125,14 +125,15 @@
 }
 
 .backToTop {
-  float: right;
   display: none;
   transform: rotate(180deg);
-  height: 2.6rem;
-  margin: auto 0;
+  height: 2.3rem;
+  margin: 0.4rem 0;
   animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 } @keyframes blink { to { filter: invert(12%); } }
 
 .show {
   display: block;
+  position: absolute;
+  right: 1rem;
 }
