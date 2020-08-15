@@ -5,11 +5,9 @@ function onScroll() {
   const backToTop = document.querySelector("[class*='backToTop']")
   const head = document.querySelector("[class*='largeCenterHeader']")
 
-  const originalState = `${utilStyles.navContainer} ${utilStyles.noSelect}`
-
   nav.className = (head.getBoundingClientRect().bottom <= 0)
-    ? `${originalState} ${utilStyles.sticky}`
-    : `${originalState}`
+    ? `${utilStyles.navContainer} ${utilStyles.noSelect} ${utilStyles.sticky}`
+    : `${utilStyles.navContainer} ${utilStyles.noSelect}`
 
   backToTop.className = (head.getBoundingClientRect().bottom <= 0)
     ? `${utilStyles.backToTop} ${utilStyles.noSelect} ${utilStyles.show}`
