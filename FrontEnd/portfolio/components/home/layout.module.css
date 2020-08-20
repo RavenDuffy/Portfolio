@@ -134,3 +134,35 @@
 .inlineForm input.budgetInput {
   width: 4.2rem;
 }
+
+.projectLists:first-child {
+  margin-top: 4rem;
+}
+
+.showcaseProject {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.showcaseProject:hover {
+  background-color: transparent;
+}
+
+.showcaseProject img {
+  height: 405px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.showcaseProject:hover img {
+  transition: 0.2s;
+  filter: invert(5%);
+}
+
+.showcaseProject p {
+  margin: 0;
+  background-color: #ff9400;
+  padding-left: 0.4rem;
+}

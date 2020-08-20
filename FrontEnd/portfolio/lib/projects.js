@@ -48,5 +48,8 @@ export function getSortedProjectData() {
     }
   })
 
-  return allProjectData
+  return allProjectData.sort((a, b) => {
+    if (a.projectId > b.projectId) return 1;
+    else return -1;
+  })
 }
