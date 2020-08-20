@@ -158,7 +158,12 @@
 
 .showcaseProject:hover img {
   transition: 0.2s;
-  filter: invert(5%);
+  filter: brightness(135%);
+}
+
+.showcaseProject:hover p {
+  transition: 0.5s;
+  padding-left: 2rem;
 }
 
 .showcaseProject p {
