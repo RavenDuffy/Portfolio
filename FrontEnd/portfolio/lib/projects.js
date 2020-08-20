@@ -16,7 +16,7 @@ export function getAllProjectIds() {
   })
 }
 
-export function getProjectData(id) {
+export async function getProjectData(id) {
   const filePath = path.join(projectDir, `${id}.md`);
   const fileContents = fs.readFileSync(filePath, 'utf-8');
 
@@ -48,8 +48,5 @@ export function getSortedProjectData() {
     }
   })
 
-  return allProjectData.sort((a, b) => {
-    if (a.date < b.date) return 1;
-    else return -1;
-  })
+  return allProjectData
 }

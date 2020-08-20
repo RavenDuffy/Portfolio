@@ -26,7 +26,11 @@ export default function Layout({children}) {
   return (
     <div className={styles.mainContainer} id="hero" data-background="#333333">
       <Head>
-        <Meta name={name} pageTitle={pageTitle} description={description} />
+        <Meta
+          name={encodeURI(name)}
+          pageTitle={encodeURI(pageTitle)}
+          description={encodeURI(description)}
+        />
       </Head>
       <div className={styles.hero}>
         <header className={styles.header}>

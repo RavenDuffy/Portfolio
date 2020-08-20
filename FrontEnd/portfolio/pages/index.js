@@ -7,14 +7,26 @@ import ContactLayout from '../components/home/contact.layout.js'
 import utilStyles from '../styles/utils.module.css'
 import styles from '../components/home/layout.module.css'
 
-export default function Home() {
+import { getSortedProjectData } from '../lib/projects.js'
+
+// THIS FUNCTION CAN ONLY BE PLACED INSIDE FILES WITHIN THE PAGES DIRECTORY
+export async function getStaticProps() {
+  const allProjectData = getSortedProjectData();
+  return {
+    props: {
+      allProjectData
+    }
+  }
+}
+
+export default function Home({ allProjectData }) {
   return (
     <Layout>
       <Head>
         <title>{name}</title>
       </Head>
       <AboutLayout />
-      <ShowcaseLayout />
+      <ShowcaseLayout home allProjectData={allProjectData} />
       <ContactLayout />
     </Layout>
   )
