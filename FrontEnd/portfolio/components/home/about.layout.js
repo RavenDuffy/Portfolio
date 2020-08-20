@@ -3,7 +3,7 @@ import styles from './layout.module.css'
 
 export default function AboutLayout() {
   return (
-    <div className={styles.section} id="about">
+    <div className={styles.section} id="about" data-background="#333">
       <p className={styles.introText}>Hi, I'm <span className={styles.importantText}>Raven</span>, a final year computer science student studying at
         Newcastle University. Currently <a href="mailto:ravenduffy@pm.me?subject=Hi%20Raven!">available</a> for
         any small project work.

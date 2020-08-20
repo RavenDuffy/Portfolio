@@ -3,7 +3,7 @@ import styles from './layout.module.css'
 
 export default function ContactLayout() {
   return (
-    <div className={styles.section} id="contact">
+    <div className={styles.section} id="contact" data-background="#333">
       <form className={styles.inlineForm}>
         <label htmlFor="name">My name is </label>
         <input type="text" name="name" className={styles.nameInput} id="name" placeholder="John Doe" required></input>.

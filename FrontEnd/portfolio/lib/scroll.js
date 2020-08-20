@@ -16,6 +16,25 @@ function onScroll() {
 
 window.addEventListener("scroll", onScroll);
 
+function onScrollStyler() {
+  const viewportHeight = window.innerHeight;
+  const elements = [
+    document.getElementById('hero'),
+    document.getElementById('about'),
+    document.getElementById('showcase'),
+    document.getElementById('contact')
+  ];
+
+  let currentSection = elements[0];
+  for (let elem of elements) {
+    if (elem.getBoundingClientRect().top <= viewportHeight / 2)
+      currentSection = elem
+  }
+  document.body.style.background = currentSection.dataset.background
+}
+
+window.addEventListener("scroll", onScrollStyler);
+
 export default function Scroll() {
   return null;
 }
