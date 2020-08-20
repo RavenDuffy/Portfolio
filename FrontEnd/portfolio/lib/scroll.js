@@ -1,6 +1,13 @@
 import utilStyles from '../styles/utils.module.css'
 
 function onScroll() {
+  pinNav()
+  backColour()
+}
+
+window.addEventListener("scroll", onScroll);
+
+function pinNav() {
   const nav = document.querySelector("[class*='navContainer']")
   const backToTop = document.querySelector("[class*='backToTop']")
   const head = document.querySelector("[class*='largeCenterHeader']")
@@ -14,9 +21,7 @@ function onScroll() {
     : `${utilStyles.backToTop} ${utilStyles.noSelect}`
 }
 
-window.addEventListener("scroll", onScroll);
-
-function onScrollStyler() {
+function backColour() {
   const viewportHeight = window.innerHeight;
   const elements = [
     document.getElementById('hero'),
@@ -32,8 +37,6 @@ function onScrollStyler() {
   }
   document.body.style.background = currentSection.dataset.background
 }
-
-window.addEventListener("scroll", onScrollStyler);
 
 export default function Scroll() {
   return null;
