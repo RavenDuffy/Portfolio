@@ -49,7 +49,7 @@ export function getSortedProjectData() {
   })
 
   return allProjectData.sort((a, b) => {
-    if (a.projectId > b.projectId) return 1;
+    if (a.projectId < b.projectId) return 1;
     else return -1;
   })
 }

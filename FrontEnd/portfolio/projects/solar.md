@@ -1,7 +1,7 @@
 ---
 title: 'Solar'
 picture: '../images/projectimages/solar.PNG'
-projectId: 1
+projectId: 8
 ---
 
 W/e
