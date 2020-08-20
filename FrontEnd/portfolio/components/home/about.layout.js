@@ -21,7 +21,7 @@ export default function AboutLayout() {
         <div className={styles.flexContainer}>
           <h3 className={utilStyles.noSelect}>Socials</h3>
           <div className={styles.outlineContainer}>
-            <p><a target="_blank" href="mailto:ravenduffy@pm.me?subject=Hi%20Raven!">ProtonMail</a></p>
+            <p><a target="_blank" href="mailto:ravenduffy@pm.me?subject=Hi%20Raven!">ravenduffy@pm.me</a></p>
             <p><a target="_blank" href="https://www.linkedin.com/in/ravenduffy/">LinkedIn</a></p>
             <p><a target="_blank" href="https://github.com/ravenduffy/">GitHub</a></p>
           </div>
