@@ -152,14 +152,20 @@
 
 .showcaseProject img {
   height: 405px;
+  border: 1px solid transparent;
+  border-bottom: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  animation: non;
 }
 
 .showcaseProject:hover img {
   transition: 0.2s;
   filter: brightness(135%);
-}
+  border: 1px solid #ff9400;
+  border-bottom: none;
+  animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+} @keyframes blink { to { filter: brightness(80%); } }
 
 .showcaseProject p {
   margin: 0;
