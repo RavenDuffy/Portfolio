@@ -24,7 +24,7 @@ export default function Project({ projectData }) {
       <header>
         <Nav />
       </header>
-      <div className={`${utilStyles.flexCenterContainer} ${utilStyles.clearNav}`}>
+      <div className={`${utilStyles.mainContainer} ${utilStyles.clearNav}`}>
         <div
           className={utilStyles.section}
           dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}

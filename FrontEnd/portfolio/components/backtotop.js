@@ -1,11 +1,11 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import utilStyles from '../styles/utils.module.css'
 
 export default function BackToTop(target) {
   if (process.browser) {
-    console.log(target.target)
     return (
-      <Link href={target.target}>
+      <Link href="/projects/[projectid]" as={target.target}>
         <img
           src="/images/down.svg"
           className={`${utilStyles.backToTop} ${utilStyles.noSelect}`}
