@@ -1,7 +1,7 @@
 export default function Meta({name, pageTitle, description}) {
   return (
     <>
-      <link rel="icon" href="favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       <meta name="Raven Duffy" content="Raven Duffy's portfolio" />
       <meta name="title" content={pageTitle} />
       <meta name="description" content={description} />

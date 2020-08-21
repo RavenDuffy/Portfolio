@@ -1,12 +1,16 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Meta from '../../components/meta.js'
+import Nav from '../../components/nav.js'
 import utilStyles from '../../styles/utils.module.css'
 import { getAllProjectIds, getProjectData } from '../../lib/projects.js'
 
 export default function Project({ projectData }) {
+  let target;
   if (process.browser) {
     document.body.style.transition = "none"
     document.body.style.background = "#333"
+    target = document.location.pathname
   }
   return (
     <>
@@ -17,7 +21,15 @@ export default function Project({ projectData }) {
           description={encodeURI("non")}
         />
       </Head>
-      <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+      <header>
+        <Nav />
+      </header>
+      <div className={`${utilStyles.flexCenterContainer} ${utilStyles.clearNav}`}>
+        <div
+          className={utilStyles.section}
+          dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}
+        />
+      </div>
     </>
   )
 }

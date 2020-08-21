@@ -8,7 +8,6 @@ import Meta from '../meta.js'
 import NavArrow from '../navarrow.js'
 import BackToTop from '../backtotop.js'
 
-
 export const name = 'Raven Duffy'
 export const pageTitle = 'Raven Duffy | Anything you need to know about me'
 const description = `Hi I'm Raven Duffy, a full stack developer with a focus on \
