@@ -3,52 +3,8 @@ title: 'Solar'
 picture: '../images/projectimages/solar.PNG'
 projectId: 8
 ---
-W/e
+Hello Test,
 
-d
-sd
+<img src='../images/projectimages/solar.PNG' alt="solar" style="width: 100%"/>
 
-
-
-sd
-
-
-
-sd
-
-
-sd
-
-
-sd
-s
-
-sd
-
-sd
-
-sd
-
-asd
-
-ds
-
-sd
-
-d
-
-d
-
-d
-
-sd
-
-sd
-
-ds
-
-sd
-
-sd
-
-sd
+Nice
