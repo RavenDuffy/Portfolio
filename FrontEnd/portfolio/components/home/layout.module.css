@@ -164,8 +164,7 @@
   filter: brightness(135%);
   border: 1px solid #ff9400;
   border-bottom: none;
-  animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
-} @keyframes blink { to { filter: brightness(80%); } }
+}
 
 .showcaseProject p {
   margin: 0;
