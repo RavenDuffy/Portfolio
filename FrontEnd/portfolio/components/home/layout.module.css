@@ -162,7 +162,7 @@
 }
 
 .showcaseProject:hover p {
-  transition: 0.5s;
+  transition: .5s;
   padding-left: 2rem;
 }
 

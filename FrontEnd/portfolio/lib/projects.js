@@ -10,8 +10,10 @@ export function getAllProjectIds() {
   const fileNames = fs.readdirSync(projectDir);
 
   return fileNames.map(fileName => {
-    params: {
-      id: fileName.replace(/\.md$/, '')
+    return {
+      params: {
+        projectid: fileName.replace(/\.md$/, '')
+      }
     }
   })
 }

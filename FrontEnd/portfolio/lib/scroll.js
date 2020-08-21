@@ -1,8 +1,7 @@
 import utilStyles from '../styles/utils.module.css'
 
 function onScroll() {
-  pinNav()
-  backColour()
+  if (window.location.pathname == "/") { pinNav(); backColour() }
 }
 
 window.addEventListener("scroll", onScroll);
