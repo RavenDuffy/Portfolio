@@ -15,10 +15,11 @@ export default function Project({ projectData }) {
   return (
     <>
       <Head>
+        <title>{`The ${projectData.title} Project`}</title>
         <Meta
-          name={encodeURI(`The ${projectData.title} Project`)}
-          pageTitle={encodeURI(`The ${projectData.title} Project`)}
-          description={encodeURI("non")}
+          name={projectData.title}
+          pageTitle={`The ${projectData.title} Project`}
+          description={"non"}
         />
       </Head>
       <header>

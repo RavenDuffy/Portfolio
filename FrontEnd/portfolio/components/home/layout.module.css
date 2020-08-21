@@ -161,13 +161,15 @@
   filter: brightness(135%);
 }
 
-.showcaseProject:hover p {
-  transition: .5s;
-  padding-left: 2rem;
-}
-
 .showcaseProject p {
   margin: 0;
   background-color: #ff9400;
   padding-left: 0.4rem;
+  text-shadow: none;
+}
+
+.showcaseProject:hover p {
+  transition: .5s;
+  padding-left: 2rem;
+  text-shadow: -1px 1px 2px #0009;
 }
