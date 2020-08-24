@@ -2,8 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Meta from '../../components/meta.js'
 import Nav from '../../components/nav.js'
+import BackToTop from '../../components/backtotop.js'
 import utilStyles from '../../styles/utils.module.css'
-import { getAllProjectIds, getProjectData } from '../../lib/projects.js'
+import { getAllProjectIds, getProjectData } from '../../lib/projects.js'  
 
 export default function Project({ projectData }) {
   let target;
@@ -12,24 +13,28 @@ export default function Project({ projectData }) {
     document.body.style.background = "#333"
     target = document.location.pathname
   }
+
+  const projectTitle = `Raven Duffy | The ${projectData.title} Project`
+
   return (
     <>
       <Head>
-        <title>{`The ${projectData.title} Project`}</title>
+        <title>{projectTitle}</title>
         <Meta
           name={projectData.title}
-          pageTitle={`The ${projectData.title} Project`}
+          pageTitle={projectTitle}
           description={"non"}
         />
       </Head>
       <header>
         <Nav />
       </header>
-      <div className={`${utilStyles.mainContainer} ${utilStyles.clearNav}`}>
+      <div className={`${utilStyles.mainContainer}`}>
         <div
           className={utilStyles.section}
           dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}
         />
+        <BackToTop target={target} visible />
       </div>
     </>
   )

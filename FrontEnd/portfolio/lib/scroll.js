@@ -16,7 +16,7 @@ function pinNav() {
     : `${utilStyles.navContainer} ${utilStyles.noSelect}`
 
   backToTop.className = (head.getBoundingClientRect().bottom <= 0)
-    ? `${utilStyles.backToTop} ${utilStyles.noSelect} ${utilStyles.show}`
+    ? `${utilStyles.backToTop} ${utilStyles.noSelect} ${utilStyles.showOnNav}`
     : `${utilStyles.backToTop} ${utilStyles.noSelect}`
 }
 

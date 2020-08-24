@@ -105,21 +105,33 @@
   animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 } @keyframes blink { to { filter: invert(12%); } }
 
-.show {
+.showOnNav {
   display: block;
   position: absolute;
   right: 1rem;
+}
+
+.show {
+  display: block;
 }
 
 .smallNav {
   justify-content: space-between;
   padding: 0;
   width: 100%;
+  height: 2rem;
 }
 
-.smallNav h1 {
+.smallNav img {
   margin-right: 5rem;
-  font-size: 1.5rem;
+  height: 1.6rem;
+  margin: auto .5rem;
+  animation: blink 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+} @keyframes blink { to { filter: invert(12%); } }
+
+.smallNav img:hover {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(10deg) brightness(118%) contrast(119%);
+  animation: non;
 }
 
 .smallNav .backToTop {
