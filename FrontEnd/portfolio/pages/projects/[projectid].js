@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Meta from '../../components/meta.js'
-import Nav from '../../components/nav.js'
+import BackToHome from '../../components/backtohome.js'
 import BackToTop from '../../components/backtotop.js'
 import utilStyles from '../../styles/utils.module.css'
-import { getAllProjectIds, getProjectData } from '../../lib/projects.js'  
+import { getAllProjectIds, getProjectData } from '../../lib/projects.js'
 
 export default function Project({ projectData }) {
   let target;
@@ -27,14 +27,16 @@ export default function Project({ projectData }) {
         />
       </Head>
       <header>
-        <Nav />
+        <BackToHome />
       </header>
       <div className={`${utilStyles.mainContainer}`}>
         <div
           className={utilStyles.section}
           dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}
         />
-        <BackToTop target={target} visible />
+        <div className={utilStyles.flexCenterContainer}>
+          <BackToTop target={target} visible />
+        </div>
       </div>
     </>
   )
