@@ -124,6 +124,7 @@
   position: fixed;
   top: 2rem;
   right: calc(50vw - 28rem);
+  z-index: 99;
 }
 
 .backToHome::before {

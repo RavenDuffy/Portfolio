@@ -13,14 +13,6 @@ export default function Project({ projectData }) {
   if (process.browser) {
     document.body.style.background = "#333"
     target = document.location.pathname
-
-    const root = document.documentElement;
-    const img = (projectData.gif)
-      ? projectData.gif
-      : (projectData.picture)
-        ? projectData.picture
-        : 'http://via.placeholder.com/800/000'
-    root.style.setProperty('--projectBackground', `url(${img})`)
   }
 
   const projectTitle = `Raven Duffy | The ${projectData.title} Project`
@@ -39,8 +31,20 @@ export default function Project({ projectData }) {
         <BackToHome />
       </header>
       <div className={styles.headerLayout}>
-        <h1>{`The ${projectData.title} Project`}</h1>
-        <NavArrow target="#main" invert idle />
+        <div className={styles.initial}>
+          <div className={styles.projectSections}>
+            <h1>{`The ${projectData.title} Project`}</h1>
+            <div id="sections" className={styles.selectSections}>
+              { Object.entries(projectData.colourMap).slice(1, Object.entries(projectData.colourMap).length)
+                .map((colour, id) => (
+                <Link href={`#${colour[0]}`} key={id}>
+                  <p className={styles.selectSection} style={{ "backgroundColor": colour[1] }}>{`${colour[0]}`}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <img src={projectData.picture} alt="image"/>
+        </div>
       </div>
       <div id="main" className={`${utilStyles.mainContainer}`}>
         <div className={`${utilStyles.section}`}>
