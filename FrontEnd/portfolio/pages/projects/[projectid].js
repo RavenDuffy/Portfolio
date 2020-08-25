@@ -33,7 +33,7 @@ export default function Project({ projectData }) {
       <div className={styles.headerLayout}>
         <div className={styles.initial}>
           <div className={styles.projectSections}>
-            <h1>{`The ${projectData.title} Project`}</h1>
+            <h1 style={{ "backgroundColor": Object.entries(projectData.colourMap)[0][1] }}>{`The ${projectData.title} Project`}</h1>
             <div id="sections" className={styles.selectSections}>
               { Object.entries(projectData.colourMap).slice(1, Object.entries(projectData.colourMap).length)
                 .map((colour, id) => (
