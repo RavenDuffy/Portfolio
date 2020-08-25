@@ -18,6 +18,10 @@
   src: url('../public/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
 }
 
+:root {
+  --projectBackground: url('http://via.placeholder.com/800/000')
+}
+
 body, html {
   margin: 0;
   padding: 0;

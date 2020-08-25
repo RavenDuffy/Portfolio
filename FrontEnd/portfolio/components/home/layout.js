@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import styles from './layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
@@ -31,7 +30,7 @@ export default function Layout({children}) {
           description={description}
         />
       </Head>
-      <div className={styles.hero}>
+      <div className={`${styles.hero}`}>
         <header className={styles.header}>
           <Link href="/">
             <h1 className={`${styles.largeCenterHeader} ${utilStyles.noSelect}`}>{name}</h1>
@@ -43,7 +42,7 @@ export default function Layout({children}) {
             <BackToTop target="/" />
           </div>
         </header>
-        <NavArrow target="#about"/>
+        <NavArrow target="#about" invert idle />
       </div>
       <main>{children}</main>
       <Scroll />

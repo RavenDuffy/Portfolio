@@ -1,7 +1,7 @@
 ---
 title: 'Solar'
 picture: '../images/projectimages/solar.PNG'
-gif: '../images/projectimages/Solar_GIF.gif'
+gif: '../images/projectimages/solar-gif.gif'
 projectId: 8
 ---
 Hello Test,

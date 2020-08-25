@@ -1,13 +1,30 @@
-.panel {
+.headerLayout {
+  width: calc(100vw - (100vw - 100%));
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.panel img {
-  width: 47.5%;
-  height: auto;
-  margin: auto;
-  margin-right: 2.5%;
+.headerLayout::before {
+  content: '';
+  overflow: hidden;
+  position: absolute;
+  top: -55px;
+  bottom: -55px;
+  left: -55px;
+  right: -55px;
+  background-image: var(--projectBackground);
+  background-size: cover;
+  filter: blur(3px) brightness(135%);
+}
+
+.headerLayout h1 {
+  text-shadow: 0 5px 2px #000;
+  font-family: 'OpenSans-Bolt', sans-serif;
+  font-size: 4rem;
+  z-index: 1;
 }

@@ -157,6 +157,10 @@
   background-color: #fff2;
 }
 
-.circular {
-  /* border-radius: 50%; */
+.invert {
+  filter: invert(100%);
+}
+
+.idle {
+  animation: non;
 }

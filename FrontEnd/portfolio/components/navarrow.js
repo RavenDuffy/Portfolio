@@ -1,16 +1,18 @@
 import Link from 'next/link'
 import utilStyles from '../styles/utils.module.css'
 
-export default function NavArrow({target}) {
+export default function NavArrow({target, invert, idle}) {
+  let classNames = (invert)
+    ? `${utilStyles.downArrow} ${utilStyles.noSelect} ${utilStyles.invert}`
+    : `${utilStyles.downArrow} ${utilStyles.noSelect}`
+  classNames = (idle) ? `${classNames} + ${utilStyles.idle}` : classNames
   return (
-    <div className={utilStyles.flexCenterContainer}>
       <Link href={`${target}`}>
         <img
-          src="images/down.svg"
-          className={`${utilStyles.downArrow} ${utilStyles.noSelect}`}
+          src="/images/down.svg"
+          className={classNames}
           alt={"down-arrow"}
         />
       </Link>
-    </div>
   )
 }

@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 export default function ContactLayout() {
   return (
     <div className={styles.section} id="contact" data-background="#333">
-      <form className={styles.inlineForm}>
+      <form className={styles.inlineForm} data-aos="fade-down">
         <label htmlFor="name">My name is </label>
         <input type="text" name="name" className={styles.nameInput} id="name" placeholder="John Doe" required></input>.
         <br />
