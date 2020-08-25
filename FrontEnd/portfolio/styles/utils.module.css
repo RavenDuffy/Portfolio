@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.flexCenterContainerHorizontal {
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
 .mainContainer {
   max-width: 44rem;
   padding: 0 1rem;
@@ -127,10 +132,10 @@
   position: fixed;
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0 2px 10px #000;
+  box-shadow: 0 2px 5px #000;
   width: 3rem;
   height: 3rem;
-  transform: translate(-24%, -24%);
+  transform: translate(-23.5%, -24%);
   z-index: -1;
 }
 
@@ -140,7 +145,7 @@
   border-radius: 50%;
 }
 
-.backToHome img:hover {
+.backToHome:hover img {
   transition: .3s;
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(10deg) brightness(118%) contrast(119%);
   background-color: transparent;
@@ -149,7 +154,7 @@
 
 .backToHome:hover::before {
   transition: .3s;
-  background-color: #333;
+  background-color: #fff2;
 }
 
 .circular {

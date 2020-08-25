@@ -19,6 +19,10 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProjectData }) {
+  if (process.browser) {
+    document.body.style.transition = ".5s background"
+  }
+
   return (
     <Layout>
       <Head>

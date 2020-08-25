@@ -23,7 +23,7 @@ const Scroll = dynamic(
 
 export default function Layout({children}) {
   return (
-    <div className={styles.mainContainer} id="hero" data-background="#333333">
+    <div className={styles.mainContainer} id="hero">
       <Head>
         <Meta
           name={name}

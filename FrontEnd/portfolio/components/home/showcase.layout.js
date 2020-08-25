@@ -5,17 +5,16 @@ import styles from './layout.module.css'
 
 export default function ShowcaseLayout({ allProjectData }) {
   return (
-    <div className={styles.section} id="showcase">
+    <div className={styles.section} id="showcase" data-background="#111">
       <ul className={`${utilStyles.list} ${styles.projectLists}`}>
         { allProjectData.map(({ id, picture, title }) => (
-          <li className={utilStyles.listItem} key={id}>
+          <li className={styles.projectListItem} key={id}>
             <Link href="/projects/[projectid]" as={`/projects/${id}`}>
                 <a className={styles.showcaseProject}>
                   <img src={picture} alt={title}/>
                   <p>{title}</p>
                 </a>
             </Link>
-            <br />
           </li>
         ))}
       </ul>

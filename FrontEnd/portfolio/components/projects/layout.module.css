@@ -1,0 +1,13 @@
+.panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.panel img {
+  width: 47.5%;
+  height: auto;
+  margin: auto;
+  margin-right: 2.5%;
+}

@@ -4,6 +4,7 @@ import Meta from '../../components/meta.js'
 import BackToHome from '../../components/backtohome.js'
 import BackToTop from '../../components/backtotop.js'
 import utilStyles from '../../styles/utils.module.css'
+import styles from '../../components/projects/layout.module.css'
 import { getAllProjectIds, getProjectData } from '../../lib/projects.js'
 
 export default function Project({ projectData }) {
@@ -30,10 +31,10 @@ export default function Project({ projectData }) {
         <BackToHome />
       </header>
       <div className={`${utilStyles.mainContainer}`}>
-        <div
-          className={utilStyles.section}
-          dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}
-        />
+        <div className={`${utilStyles.section} ${styles.panel}`}>
+          <img src={projectData.gif} alt="image" />
+          <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+        </div>
         <div className={utilStyles.flexCenterContainer}>
           <BackToTop target={target} visible />
         </div>
