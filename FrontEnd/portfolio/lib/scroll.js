@@ -22,12 +22,7 @@ function pinNav() {
 
 function backColour() {
   const viewportHeight = window.innerHeight;
-  const elements = [
-    document.getElementById('hero'),
-    document.getElementById('about'),
-    document.getElementById('showcase'),
-    document.getElementById('contact')
-  ];
+  const elements = [].slice.call(document.querySelectorAll("[data-background]"))
 
   let currentSection = elements[0];
   for (let elem of elements) {

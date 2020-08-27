@@ -22,7 +22,7 @@ const Scroll = dynamic(
 
 export default function Layout({children}) {
   return (
-    <div className={styles.mainContainer} id="hero">
+    <div className={styles.mainContainer} id="hero" data-background="#333">
       <Head>
         <Meta
           name={name}
@@ -39,7 +39,7 @@ export default function Layout({children}) {
             <Link href="#about"><h1>About</h1></Link>
             <Link href="#showcase"><h1>Showcase</h1></Link>
             <Link href="#contact"><h1>Contact</h1></Link>
-            <BackToTop target="/" />
+            <BackToTop target="/" invert idle />
           </div>
         </header>
         <NavArrow target="#about" invert idle />
