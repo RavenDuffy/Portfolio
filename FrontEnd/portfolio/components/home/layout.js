@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { motion } from 'framer-motion'
 import styles from './layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
 import Meta from '../meta.js'
@@ -30,7 +31,20 @@ export default function Layout({children}) {
           description={description}
         />
       </Head>
-      <div className={`${styles.hero}`}>
+      <motion.div className={`${styles.hero}`} initial="hidden" animate="visible" variants={{
+        hidden: {
+          scale: 1,
+          opacity: 0
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: .4,
+            duration: 1.5
+          }
+        }
+      }}>
         <header className={styles.header}>
           <Link href="/">
             <h1 className={`${styles.largeCenterHeader} ${utilStyles.noSelect}`}>{name}</h1>
@@ -43,7 +57,7 @@ export default function Layout({children}) {
           </div>
         </header>
         <NavArrow target="#about" invert idle />
-      </div>
+      </motion.div>
       <main>{children}</main>
       <Scroll />
     </div>
