@@ -174,11 +174,11 @@
 .showcaseProject:hover img {
   transition: 0.2s;
   filter: brightness(135%);
-  border: 1px solid #ff9400;
   border-bottom: none;
 }
 
 .showcaseProject p {
+  transition: .5s;
   margin: 0;
   background-color: #ff9400;
   padding-left: 0.4rem;
