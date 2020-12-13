@@ -1,6 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 import webpackDevServer from 'webpack-dev-server' // needed to use .config
+import {CleanWebpackPlugin} from 'clean-webpack-plugin'
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 const config: webpack.Configuration = {
@@ -24,6 +25,10 @@ const config: webpack.Configuration = {
   },
   plugins: isDevelopment ? [
     new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['public'],
+      cleanStaleWebpackAssets: false
+    })
   ] : [],
   devtool: isDevelopment ? 'eval-source-map': undefined,
   devServer: {
