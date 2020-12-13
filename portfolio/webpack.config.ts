@@ -1,7 +1,8 @@
 import path from 'path'
 import webpack from 'webpack'
 import webpackDevServer from 'webpack-dev-server' // needed to use .config
-import {CleanWebpackPlugin} from 'clean-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 const config: webpack.Configuration = {
@@ -25,8 +26,11 @@ const config: webpack.Configuration = {
   },
   plugins: isDevelopment ? [
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
     new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['public'],
+      cleanAfterEveryBuildPatterns: ['public', '!public/*', '!./public/manifest.json'],
       cleanStaleWebpackAssets: false
     })
   ] : [],
