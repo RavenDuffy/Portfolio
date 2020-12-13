@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
+import "./sass/style.scss"
+import placeholder from './images/placeholder.png'
 
 class Clock extends React.Component<{}, {date: Date}> {
   timerID: any
@@ -46,10 +48,11 @@ const Counter: React.FC<{}> = () => {
 }
 
 const App = () => (
-  <>
+  <div>
     <Clock />
     <Counter />
-  </>
+    <img src={placeholder} alt="pic"/>
+  </div>
 )
 
 ReactDOM.render(
