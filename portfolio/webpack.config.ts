@@ -1,6 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
-import webpackDevServer from 'webpack-dev-server'
+import webpackDevServer from 'webpack-dev-server' // needed to use .config
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
 const config: webpack.Configuration = {
   entry: './src/index.tsx',
@@ -20,6 +21,14 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
+  plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      async: false,
+      eslint: {
+        files: './src/*'
+      }
+    })
+  ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
