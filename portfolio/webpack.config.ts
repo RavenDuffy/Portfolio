@@ -40,7 +40,7 @@ const config: webpack.Configuration = {
     }),
     new WebpackManifestPlugin()
   ] : [],
-  devtool: isDevelopment ? 'eval-source-map': undefined,
+  devtool: isDevelopment ? 'eval-source-map': false,
   devServer: {
     publicPath: '/',
     contentBase: path.join(__dirname, 'public'),
