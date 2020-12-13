@@ -30,12 +30,13 @@ const config: webpack.Configuration = {
       template: './src/index.html'
     }),
     new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['public', '!public/*', '!./public/manifest.json'],
+      cleanAfterEveryBuildPatterns: ['public', 'public/!manifest.json'],
       cleanStaleWebpackAssets: false
     })
   ] : [],
   devtool: isDevelopment ? 'eval-source-map': undefined,
   devServer: {
+    publicPath: '/',
     contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: 4000,
