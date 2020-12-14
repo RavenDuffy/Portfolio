@@ -47,12 +47,83 @@ const Counter: React.FC<{}> = () => {
   )
 }
 
+const BoilingVerdict = (props: any) => {
+  return (props.celsius >= 100) ? <p>Boiling</p> : <p>Not Boiling</p>
+}
+
+type TempState = {
+  temperature: string
+}
+
+class Calculator extends React.Component<{}, TempState> {
+  constructor(props: any) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+    this.state = { temperature: '' }
+  }
+
+  handleChange(e: any) {
+    this.setState({ temperature: e.target.value })
+  }
+
+  render() {
+    const temperature = this.state.temperature
+    return (
+      <>
+        <TemperatureInput scale='c' />
+        <TemperatureInput scale='f' />
+      </>
+    )
+  }
+}
+
+type TempInState = {
+  temperature: string;
+}
+
+type scaleNames = {
+  [i: string]: string
+  c: string;
+  f: string;
+}
+
+const scaleNames: scaleNames = {
+  c: 'Celsius',
+  f: 'Fahrenheit'
+}
+
+class TemperatureInput extends React.Component<{scale: string}, TempInState> {
+  constructor(props: any) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+    this.state = { temperature: '' }
+  }
+
+  handleChange(e: any) {
+    this.setState({ temperature: e.target.value })
+  }
+
+  render() {
+    const temperature = this.state.temperature
+    const scale = this.props.scale
+    return (
+      <fieldset>
+        <legend>Enter Temp in {scaleNames[scale]}:</legend>
+        <input 
+          value={temperature}
+          onChange={this.handleChange} />
+      </fieldset>
+    )
+  }
+}
+
 const App = () => (
-  <div>
+  <>
     <Clock />
     <Counter />
     <img src={placeholder} alt="pic"/>
-  </div>
+    <Calculator />
+  </>
 )
 
 ReactDOM.render(
