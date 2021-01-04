@@ -155,12 +155,96 @@ class TemperatureInput extends React.Component<TemperatureProps, {}> {
   }
 }
 
+function FancyBorder(props: any) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.colour}>
+      {props.children}
+    </div>
+  )
+}
+
+function Dialog(props: any) {
+  return (
+    <FancyBorder colour="blue">
+      <h1 className="Dialog-title">
+        {props.title}
+      </h1>
+      <p className="Dialog-message">
+        {props.message}
+      </p>
+      {props.children}
+    </FancyBorder>
+  )
+}
+
+class SignUpDialog extends React.Component<{}, {login: string}> {
+  constructor(props: any) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSignUp = this.handleSignUp.bind(this)
+    this.state = {login: ''}
+  }
+
+  render() {
+    return(
+      <Dialog title="Hello"
+        message="WOw!?">
+        <input value={this.state.login}
+          onChange={this.handleChange}
+        />
+        <button onClick={this.handleSignUp}>
+          Sign Up!
+        </button>
+      </Dialog>
+    )
+  }
+
+  handleChange(e: any) {
+    console.log(e)
+    this.setState({login: e.target.value})
+  }
+
+  handleSignUp() {
+    alert(`Welcome ${this.state.login}`)
+  }
+}
+
+function WelcomeDialog() {
+  return (
+    <Dialog
+      title="Welcome"
+      message="Thanks for visiting!"
+    />
+  )
+}
+
+function SplitPane(props: any) {
+  return (
+    <div className="SplitPane">
+      <div className="SplitPane-left">
+        {props.left}
+      </div>
+      <div className="SplitPane-right">
+        {props.right}
+      </div>
+    </div>
+  )
+}
+
 const App = () => (
   <>
-    <Clock />
-    <Counter />
     <img src={placeholder} alt="pic"/>
     <Calculator />
+    <WelcomeDialog />
+    <SplitPane
+      left={
+        <Clock />
+      }
+      right={
+        <Counter />
+      }
+    />
+    <SignUpDialog />
   </>
 )
 
